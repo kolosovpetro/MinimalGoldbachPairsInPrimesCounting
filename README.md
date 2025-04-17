@@ -1,18 +1,4 @@
-# GitHub LaTeX Template
-
-[![Build PDF](https://github.com/kolosovpetro/github-latex-template/actions/workflows/build-pdf.yml/badge.svg)](https://github.com/kolosovpetro/github-latex-template/actions/workflows/build.yml/badge.svg)
-[![Build and Deploy PDF](https://github.com/kolosovpetro/github-latex-template/actions/workflows/build-and-deploy-pdf.yml/badge.svg)](https://github.com/kolosovpetro/github-latex-template/actions/workflows/build-and-deploy.yml/badge.svg)
-
-LaTeX template for GitHub including general CI/CD actions and Mathematica templates.
-
-- https://dev.azure.com/PetroKolosovProjects/github-latex-template
-
-## GitHub Actions used
-
-- https://github.com/actions/checkout
-- https://github.com/GitTools/actions/blob/main/docs/examples/github/gitversion/index.md
-- https://github.com/xu-cheng/latex-action
-- https://github.com/actions/upload-artifact
+# About Goldbach Pairs
 
 ## Build and run using PowerShell (Windows)
 
