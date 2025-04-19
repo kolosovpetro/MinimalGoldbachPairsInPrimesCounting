@@ -13,6 +13,10 @@ twin-prime counting $\pi_2(2N)$
 $$\pi(2N) = F_{2N}(3) + 1$$
 $$\pi_2(2N) = F_{2N}(3) - F_{2N}(5)$$
 
+## Related MathOverflow question
+
+- https://mathoverflow.net/q/54710/113033
+
 ## Build and run using PowerShell (Windows)
 
 - Install `MikTeX`: https://miktex.org/download
