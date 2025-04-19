@@ -15,12 +15,12 @@ jobs:
     uses: kolosovpetro/github-latex-template/.github/workflows/build-and-deploy-pdf-template.yml@main
     secrets: inherit
     with:
-      file_name: 'AboutGoldbachPairs'
+      file_name: 'MinimalGoldbachPairsInPrimesCounting'
       runs_on: 'ubuntu-latest'
       workflow_name: 'Build and Deploy PDF'
       build_assets_path: |
-        src/AboutGoldbachPairs.tex
-        src/AboutGoldbachPairs.bbl
-        src/AboutGoldbachPairs.bib
+        src/MinimalGoldbachPairsInPrimesCounting.tex
+        src/MinimalGoldbachPairsInPrimesCounting.bbl
+        src/MinimalGoldbachPairsInPrimesCounting.bib
         src/sections
       working_directory_for_latex: 'src'
