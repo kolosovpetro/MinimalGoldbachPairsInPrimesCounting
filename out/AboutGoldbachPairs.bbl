@@ -19,4 +19,18 @@ Michel Yamagishi.
 \newblock \url{https://oeis.org/A049591}, 2025.
 \newblock Accessed: 2025-04-18.
 
+\bibitem{oeis_A007508}
+{The OEIS Foundation Inc.}
+\newblock {The On-Line Encyclopedia of Integer Sequences}, a007508: Number of
+  twin prime pairs below 10 to power n.
+\newblock \url{https://oeis.org/A007508}, 2025.
+\newblock Accessed: 2025-04-18.
+
+\bibitem{oeis:A124582}
+{The OEIS Foundation Inc.}
+\newblock {The On-Line Encyclopedia of Integer Sequences}, a124582: Primes p
+  such that q-p greater of equal 6, where q is the next prime after p.
+\newblock \url{https://oeis.org/A124582}, 2025.
+\newblock Accessed: 2025-04-18.
+
 \end{thebibliography}

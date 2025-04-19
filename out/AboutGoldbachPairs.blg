@@ -5,44 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 19 items.
 Database file #1: AboutGoldbachPairs.bib
-You've used 3 entries,
+You've used 5 entries,
             1791 wiz_defined-function locations,
-            460 strings with 4129 characters,
-and the built_in function-call counts, 423 in all, are:
-= -- 36
-> -- 12
+            468 strings with 4477 characters,
+and the built_in function-call counts, 699 in all, are:
+= -- 62
+> -- 20
 < -- 0
-+ -- 6
-- -- 3
-* -- 5
-:= -- 72
-add.period$ -- 11
-call.type$ -- 3
-change.case$ -- 3
++ -- 10
+- -- 5
+* -- 7
+:= -- 116
+add.period$ -- 19
+call.type$ -- 5
+change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 15
-empty$ -- 55
-format.name$ -- 3
-if$ -- 97
+cite$ -- 5
+duplicate$ -- 25
+empty$ -- 91
+format.name$ -- 5
+if$ -- 163
 int.to.chr$ -- 0
-int.to.str$ -- 3
+int.to.str$ -- 5
 missing$ -- 0
-newline$ -- 20
-num.names$ -- 3
-pop$ -- 19
+newline$ -- 32
+num.names$ -- 5
+pop$ -- 31
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 7
+skip$ -- 11
 stack$ -- 0
 substring$ -- 0
-swap$ -- 3
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 3
-width$ -- 4
-write$ -- 36
+while$ -- 5
+width$ -- 6
+write$ -- 60
