@@ -1,1 +1,17 @@
-Conclusions of your manuscript.
+Assuming Goldbach's Conjecture holds, we introduced a framework based on minimal
+Goldbach pairs to derive expressions for key prime-related functions.
+Specifically, we defined the function $F_{2N}(P)$ that counts occurrences of primes $p_j$ in minimal Goldbach
+pairs $(p_i, p_j)$ where $p_i = P$.
+Using this framework, we obtained
+
+\begin{itemize}
+    \item The prime-counting function: $\pi(2N) = F_{2N}(3) + 1$
+    \item The twin-prime counting function: $\pi_2(2N) = F_{2N}(3) - F_{2N}(5)$
+    \item The count of primes with next-prime gap at least 6: $\delta_6(2N) = F_{2N}(7)$
+\end{itemize}
+
+These identities establish a novel connection between Goldbach partitions and classical prime number theory.
+Computational examples confirm alignment with known integer sequences, reinforcing the potential
+of this approach for analytical and numerical exploration of prime distributions.
+All the results validated up to $N=10^8$ with source code available on
+GitHub~\cite{kolosovpetro2025minimalgoldbachpairs}.

@@ -1,41 +1,113 @@
-Your introduction here.
-Include some references~\cite{derivative_of_polynomials_via_double_limit, alekseyev2018mathoverflow, oeis_coefficients_u_m_l_k_defined_by_polynomial_identity_3}.
-Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-of type and scrambled it to make a type specimen book.
-It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+This manuscript provides a comprehensive review of the work~\cite{yamagishi2025goldbach} done by Michel Yamagishi.
+The Goldbach conjecture asserts that every even integer $2N \geq 4$ is a sum of two primes
+\begin{align*}
+    2N = p_i + p_j
+\end{align*}
+where $(p_i, p_j)$ is called a Goldbach pair.
 
-Figure example
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{sections/images/latex_configuration}
-    ~\caption{Figure example.}\label{fig:figure}
-\end{figure}
+A Goldbach pair is not unique for even integers greater than 6,
+which means that there can be multiple Goldbach pairs for even integer $2N \geq 8$.
+For example: $10=3+7$ and $10=5+5$ and $10=7+3$, where the Goldbach pairs are $(3,7), \; (5,5), \; (7,3)$.
 
-\input{sections/figures/05_fig_coefficients_a}
+The minimal Goldbach pair is the pair with the smallest $p_i$ among all goldbach pairs for even integer $2N$.
+For the even integer $10$, we have three pairs: $(3,7), \; (5,5), \; (7,3)$
+and the minimal one is $(3,7)$ because
+$3$ is the smallest among all $p_i$ values: $3, 5, 7$.
 
-\begin{equation*}
-    \llceil \nobarfrac{a}{b} \rrfloor_{m}
-\end{equation*}
-\begin{equation*}
-    \llceilCoefficient{a}{b}{m}
-\end{equation*}
 
-And for any natural $m$ we have polynomial identity
-\begin{equation}
-    x^m = \sum_{k=1}^{m} T(m, k) \centralFactorial{x}{k}
-    \label{eq:knuth-power-identity}
-\end{equation}
-where $\centralFactorial{x}{k}$ denotes central factorial defined by
-\begin{equation*}
-    \centralFactorial{x}{n} = x \fallingFactorial{x+\frac{n}{2}-1}{n-1}
-\end{equation*}
-where $\fallingFactorial{n}{k} = n (n-1) (n-2) \cdots (n-k+1)$ denotes falling factorial in Knuth's notation.
-In particular,
-\begin{equation*}
-    \centralFactorial{x}{n}
-    = x \left( x+\frac{n}{2}-1 \right) \left( x+\frac{n}{2}-1 \right) \cdots \left (x+\frac{n}{2}-n-1 \right)
-    = x \prod_{k=1}^{n-1} \left( x+\frac{n}{2}-k \right)
-\end{equation*}
+Consider the following minimal goldbach pairs for even integer $2k$ within the range $6 \leq 2k \leq 50$
+\begin{align*}
+    6  &= 3 + 3,   & 8  &= 3 + 5,   \\
+    10 &= 3 + 7,   & 12 &= 5 + 7,   \\
+    14 &= 3 + 11,  & 16 &= 3 + 13,  \\
+    18 &= 5 + 13,  & 20 &= 3 + 17,  \\
+    22 &= 3 + 19,  & 24 &= 5 + 19,  \\
+    26 &= 3 + 23,  & 28 &= 5 + 23,  \\
+    30 &= 7 + 23,  & 32 &= 3 + 29,  \\
+    34 &= 3 + 31,  & 36 &= 5 + 31,  \\
+    38 &= 7 + 31,  & 40 &= 3 + 37,  \\
+    42 &= 5 + 37,  & 44 &= 3 + 41,  \\
+    46 &= 3 + 43,  & 48 &= 5 + 43,  \\
+    50 &= 3 + 47
+\end{align*}
+We can notice that minimal Goldbach pairs having $p_i=3$ produce a sequence of odd prime numbers
+$p_j = 3, 5, 7, 11, 13, 17 \dots$ which is quite remarkable:
+\begin{align*}
+    6  &= 3 + 3,   & 8  &= 3 + 5,   \\
+    10 &= 3 + 7,   & 14 &= 3 + 11,  \\
+    16 &= 3 + 13,  & 20 &= 3 + 17,  \\
+    22 &= 3 + 19,  & 26 &= 3 + 23,  \\
+    32 &= 3 + 29,  & 34 &= 3 + 31,  \\
+    40 &= 3 + 37,  & 44 &= 3 + 41,  \\
+    46 &= 3 + 43,  & 50 &= 3 + 47
+\end{align*}
+Another interesting observation is that by selecting the pairs with minimal $p_i=5$ yields
+the sequence of primes $p_j$ such that $p_j+2$ is not prime
+\begin{align*}
+    12 &= 5 + 7,   & 18 &= 5 + 13,  \\
+    24 &= 5 + 19,  & 28 &= 5 + 23,  \\
+    36 &= 5 + 31,  & 42 &= 5 + 37,  \\
+    48 &= 5 + 43.
+\end{align*}
+To formalize and clarify our discussion, we define a few functions.
+Let $G_{\min} (2N)$ be a function that returns a set of minimal Goldbach pairs $(p_i, p_j)$ having $\min p_i$
+over the range $6 \leq 2k \leq 2N$
+\begin{align*}
+    G_{\min} (2N) = \{(p_i, p_j) \mid p_i + p_j = 2k \mid 6 \leq 2k \leq 2N \mid \min p_i \}.
+\end{align*}
+
+For example,
+\begin{align*}
+    G_{\min}(20) = \{
+    (3,3),\;
+    (3,5),\;
+    (3,7),\;
+    (5,7),\;
+    (3,11),\;
+    (3,13),\;
+    (5,13),\;
+    (3,17)
+    \}
+\end{align*}
+Let $W_{2N}(P)$ be a function that returns the set of elements $p_j$ from $G_{\min} (2N)$ having $p_i=P$
+\begin{align*}
+    W_{2N}(P) = \{p_j \mid (p_i, p_j) \in G_{\min} (2N) \; \mathrm{and} \; p_i = P \}
+\end{align*}
+Then, the sequence of odd prime numbers~\cite{oeis:A065091} is given by $W_{2N}(3)$
+\begin{align*}
+    \{ 3, \; 5, \; 7, \; 11, \; \dots, \; p \leq 2N - 3\} = W_{2N}(3)
+\end{align*}
+Now we can easily count the number of primes within the interval $6 \leq 2k \leq 2N$ because $\pi(2N)$ is equal to
+the total number of elements inside the set $W_{2N}(3)$
+\begin{align*}
+    \pi(2N) = F_{2N}(3) + 1
+\end{align*}
+where $F_{2N}(3)$ is the function that counts the number of elements inside the set $W_{2N}(3)$.
+In general $F_{2N}(P) = |W_{2N}(3)|$.
+
+Taking $P=5$ in $W_{2N}(P)$ yields a sequence of primes $p_j$ such that $p_j+2$ is not a prime~\cite{oeis:A049591}
+\begin{align*}
+    W_{2N}(5) = \{ 7, \; 13, \; 19, \; 23, \; 31, \; 37, \; 43, \; 47, \; 53, \; \dots, \;  p \leq 2N - 5 \}
+\end{align*}
+This implies that the number of twin primes in range $6 \leq 2k \leq 2N$ can be expressed in terms of $F_{2N}(P)$
+\begin{align*}
+    \pi_2 (2N) = F_{2N}(3) - F_{2N}(5)
+\end{align*}
+where $2N=10^k+2, \; k=1,2,3,4,\dots$.
+For example,
+\begin{align*}
+    \pi_2 (12) &= F_{12}(3) - F_{12}(5) = 2 \\
+    \pi_2 (102) &= F_{102}(3) - F_{102}(5) = 8 \\
+    \pi_2 (1002) &= F_{1002}(3) - F_{1002}(5) = 35 \\
+    \pi_2 (10002) &= F_{10002}(3) - F_{10002}(5) = 205 \\
+    \pi_2 (100002) &= F_{100002}(3) - F_{100002}(5) = 1224 \\
+    \pi_2 (1000002) &= F_{1000002}(3) - F_{1000002}(5) = 8169
+\end{align*}
+These results match the sequence~\cite{oeis_A007508}.
+
+Having $P=7$ function $W_{2N}(P)$ yields the sequence of primes such that $p_j-p_i \geq 6$,
+where $p_j$ is the next prime after $p_i$, see~\cite{oeis:A124582}
+\begin{align*}
+    W_{2N}(7) = \{ 23, \; 31, \;  47, \; 53, \; 61, \;  73, \; 83, \; 89, \; 113, \; \dots, \; p \leq 2N-7 \}
+\end{align*}
+This allows us to count the primes for which the next-prime gap at least 6: $\delta_6(2N) = F_{2N}(7)$.

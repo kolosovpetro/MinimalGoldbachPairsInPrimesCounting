@@ -1,18 +1,17 @@
-# GitHub LaTeX Template
+# Counting primes and twin-primes using minimal Goldbach pairs
 
-[![Build PDF](https://github.com/kolosovpetro/github-latex-template/actions/workflows/build-pdf.yml/badge.svg)](https://github.com/kolosovpetro/github-latex-template/actions/workflows/build.yml/badge.svg)
-[![Build and Deploy PDF](https://github.com/kolosovpetro/github-latex-template/actions/workflows/build-and-deploy-pdf.yml/badge.svg)](https://github.com/kolosovpetro/github-latex-template/actions/workflows/build-and-deploy.yml/badge.svg)
+Assuming Goldbach's Conjecture holds, every even integer $2N \geq 4$ can be written as $2N = p_i + p_j$
+where $(p_i, p_j)$ is called Goldbach pair.
 
-LaTeX template for GitHub including general CI/CD actions and Mathematica templates.
+The minimal Goldbach pair is a pair $(p_i,p_j)$ having the minimal $p_i$ such that $p_j = 2N - p_i$ is also a prime.
 
-- https://dev.azure.com/PetroKolosovProjects/github-latex-template
+We define a function $F_{2N}(P)$ that counts occurrences of $p_j = P$ within the range $6 \leq 2k \leq 2N$.
 
-## GitHub Actions used
+In particular, the function $F_{2N}(P)$ provides the following identities in terms of prime counting $\pi(2N)$ and
+twin-prime counting $\pi_2(2N)$
 
-- https://github.com/actions/checkout
-- https://github.com/GitTools/actions/blob/main/docs/examples/github/gitversion/index.md
-- https://github.com/xu-cheng/latex-action
-- https://github.com/actions/upload-artifact
+$$\pi(2N) = F_{2N}(3) + 1$$
+$$\pi_2(2N) = F_{2N}(3) - F_{2N}(5)$$
 
 ## Build and run using PowerShell (Windows)
 
@@ -39,33 +38,3 @@ LaTeX template for GitHub including general CI/CD actions and Mathematica templa
       ![BibTeX Configuration](./src/sections/images/bibtex_configuration.png "BibTeX Configuration")
 - Configure Inverse Search in `Intellij IDEA` for SumatraPDF: `Tools -> LaTeX -> Configure Inverse Search`
 - Compile document using `Shift + F10`
-
-## How to use Mathematica package
-
-- Open the package file `GithubLatexTemplateMathematicaPackage.m` in Wolfram Mathematica, I use version 13.0
-- Execute the package using `Shift+Enter`
-- Open the notebook file `GithubLatexTemplateMathematicaNotebook.nb`
-- Execute the line: `Needs["GithubLatexTemplateMathematicaPackage"]`
-- Continue your work as desired
-
-## Configure CI / CD
-
-- Update root file name in `build-pdf.yml` and `build-and-deploy-pdf.yml`
-- Set repository secrets
-    - `GH_ACCESS_TOKEN`: Generate GitHub Personal access token at
-      `Settings -> Developer Settings -> Personal access tokens -> Generate mew token`
-
-## Actions and their trigger policy
-
-- `build-pdf.yml` builds project using `TeXLive`. Triggered on `pull_request`, `push` to `develop` branch
-- `build-and-deploy-pdf.yml` builds project using `TeXLive` and deploys to `GitHub Pages`. Triggered on `push` to `main`
-  branch
-
-## Template example
-
-Compiled document looks like as follows
-
-<p align="center">
-  <img src="src/sections/images/template_example.png" alt="template_example"/>
-  <img src="src/sections/images/template_example2.png" alt="template_example"/>
-</p>
