@@ -1,3 +1,22 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{yamagishi2025goldbach}
+Michel Yamagishi.
+\newblock Goldbach's conjecture and how to calculate $\pi(n)$ and $\pi_2(n)$,
+  02 2025.
+\newblock \url{http://dx.doi.org/10.13140/RG.2.2.22119.76963}.
+
+\bibitem{oeis:A065091}
+{The OEIS Foundation Inc.}
+\newblock {The On-Line Encyclopedia of Integer Sequences}, a065091: Odd primes.
+\newblock \url{https://oeis.org/A065091}, 2025.
+\newblock Accessed: 2025-04-18.
+
+\bibitem{oeis:A049591}
+{The OEIS Foundation Inc.}
+\newblock {The On-Line Encyclopedia of Integer Sequences}, a049591: Odd primes
+  p such that p+2 is composite.
+\newblock \url{https://oeis.org/A049591}, 2025.
+\newblock Accessed: 2025-04-18.
 
 \end{thebibliography}

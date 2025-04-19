@@ -1,0 +1,95 @@
+This manuscript provides a comprehensive review of the work~\cite{yamagishi2025goldbach} done by Michel Yamagishi.
+Goldbach conjecture asserts that every even integer $2N \geq 4$ is a sum of two primes
+\begin{align*}
+    2N = p_i + p_j
+\end{align*}
+where $(p_i, p_j)$ is called Goldbach pair.
+
+Goldbach pair is not unique for even integers greater than 6,
+meaning that there can be multiple goldbach pairs for even integer $2N \geq 8$.
+
+For example: $10=3+7$ and $10=5+5$ and $10=7+3$ where goldbach pairs are $(3,7), \; (5,5), \; (7,3)$.
+
+Minimal goldbach pair is the pair having minimal $p_i$ across all goldbach pairs for even integer $2N$.
+
+For even integer $10$ we have three pairs $(3,7), \; (5,5), \; (7,3)$ while the minimal is $(3,7)$ because
+$3$ is the minimal value across all the $p_i$ values: $3, 5, 7$.
+
+Consider the following minimal goldbach pairs for even integer $2k$ within the range $6 \leq 2k \leq 50$
+\begin{align*}
+    6  &= 3 + 3,   & 8  &= 3 + 5,   \\
+    10 &= 3 + 7,   & 12 &= 5 + 7,   \\
+    14 &= 3 + 11,  & 16 &= 3 + 13,  \\
+    18 &= 5 + 13,  & 20 &= 3 + 17,  \\
+    22 &= 3 + 19,  & 24 &= 5 + 19,  \\
+    26 &= 3 + 23,  & 28 &= 5 + 23,  \\
+    30 &= 7 + 23,  & 32 &= 3 + 29,  \\
+    34 &= 3 + 31,  & 36 &= 5 + 31,  \\
+    38 &= 7 + 31,  & 40 &= 3 + 37,  \\
+    42 &= 5 + 37,  & 44 &= 3 + 41,  \\
+    46 &= 3 + 43,  & 48 &= 5 + 43,  \\
+    50 &= 3 + 47
+\end{align*}
+We can notice that minimal Goldbach pairs having $p_i=3$ produce a sequence of odd prime numbers
+$p_j = 3, 5, 7, 11, 13, 17 \dots$ which is quite remarkable
+\begin{align*}
+    6  &= 3 + 3,   & 8  &= 3 + 5,   \\
+    10 &= 3 + 7,   & 14 &= 3 + 11,  \\
+    16 &= 3 + 13,  & 20 &= 3 + 17,  \\
+    22 &= 3 + 19,  & 26 &= 3 + 23,  \\
+    32 &= 3 + 29,  & 34 &= 3 + 31,  \\
+    40 &= 3 + 37,  & 44 &= 3 + 41,  \\
+    46 &= 3 + 43,  & 50 &= 3 + 47
+\end{align*}
+One more interesting observation is that by selecting the pairs with minimal $p_i=5$ yields
+the sequence of primes $p_j$ such that $p_j+2$ is not a prime.
+\begin{align*}
+    12 &= 5 + 7,   & 18 &= 5 + 13,  \\
+    24 &= 5 + 19,  & 28 &= 5 + 23,  \\
+    36 &= 5 + 31,  & 42 &= 5 + 37,  \\
+    48 &= 5 + 43
+\end{align*}
+For our conversation to be more formal and objective, we define a few functions.
+Let $G_{\min} (2N)$ be a function that returns a set of minimal Goldbach pairs $(p_i, p_j)$ having $\min p_i$
+over the range $6 \leq 2k \leq 2N$
+\begin{align*}
+    G_{\min} (2N) = \{(p_i, p_j) \mid p_i + p_j = 2k \mid 6 \leq 2k \leq 2N \mid \min p_i \}.
+\end{align*}
+
+For example,
+\begin{align*}
+    G_{\min}(20) = \{
+    (3,3),\;
+    (3,5),\;
+    (3,7),\;
+    (5,7),\;
+    (3,11),\;
+    (3,13),\;
+    (5,13),\;
+    (3,17)
+    \}
+\end{align*}
+Let $W_{2N}(P)$ be a function that returns the set of elements $p_j$ from $G_{\min} (2N)$ having $p_i=P$
+\begin{align*}
+    W_{2N}(P) = \{p_j \mid (p_i, p_j) \in G_{\min} (2N) \; \mathrm{and} \; p_i = P \}
+\end{align*}
+Then sequence of odd prime numbers~\cite{oeis:A065091} is given by $W_{2N}(3)$
+\begin{align*}
+    \{ 3, \; 5, \; 7, \; 11, \; \dots, \; p < 2N\} = W_{2N}(3)
+\end{align*}
+Now we can easily count the number of primes within the interval $6 \leq 2k \leq 2N$ because $\pi(2N)$ equals to
+the total number of elements inside the set $W_{2N}(3)$
+\begin{align*}
+    \pi(2N) = F_{2N}(3) + 1
+\end{align*}
+where $F_{2N}(3)$ is the function that counts the number of elements inside the set $W_{2N}(3)$,
+in general $F_{2N}(P) = |W_{2N}(3)|$.
+
+Taking $P=5$ in $W_{2N}(P)$ yields a sequence of primes $p_j$ such that $p_j+2$ is not a prime~\cite{oeis:A049591}
+\begin{align*}
+    W_{2N}(5) = \{ 7, \; 13, \; 19, \; 23, \; 31, \; 37, \; 43, \; 47, \; 53, \; \dots, \;  p<2N\}
+\end{align*}
+Which implies that the number of twin primes in range $6 \leq 2k \leq 2N$ can be expressed in terms of $F_{2N}(P)$
+\begin{align*}
+    \pi_2 (2N) = F_{2N}(3) - F_{2N}(5)
+\end{align*}
