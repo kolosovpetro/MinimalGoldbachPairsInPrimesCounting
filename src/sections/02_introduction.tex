@@ -6,11 +6,12 @@ The Goldbach conjecture asserts that every even integer $2N \geq 4$ is a sum of 
 where $(p_i, p_j)$ is called a Goldbach pair.
 
 A Goldbach pair is not unique for even integers greater than 6,
-meaning that there can be multiple Goldbach pairs for even integer $2N \geq 8$.
-For example: $10=3+7$ and $10=5+5$ and $10=7+3$ where goldbach pairs are $(3,7), \; (5,5), \; (7,3)$.
+which means that there can be multiple Goldbach pairs for even integer $2N \geq 8$.
+For example: $10=3+7$ and $10=5+5$ and $10=7+3$, where the Goldbach pairs are $(3,7), \; (5,5), \; (7,3)$.
 
-The minimal Goldbach pair is the pair having minimal $p_i$ among all goldbach pairs for even integer $2N$.
-For the even integer $10$, we have three pairs: $(3,7), \; (5,5), \; (7,3)$, while the minimal is $(3,7)$ because
+The minimal Goldbach pair is the pair with the smallest $p_i$ among all goldbach pairs for even integer $2N$.
+For the even integer $10$, we have three pairs: $(3,7), \; (5,5), \; (7,3)$
+and the minimal one is $(3,7)$ because
 $3$ is the smallest among all $p_i$ values: $3, 5, 7$.
 
 
@@ -72,23 +73,23 @@ Let $W_{2N}(P)$ be a function that returns the set of elements $p_j$ from $G_{\m
 \begin{align*}
     W_{2N}(P) = \{p_j \mid (p_i, p_j) \in G_{\min} (2N) \; \mathrm{and} \; p_i = P \}
 \end{align*}
-Then sequence of odd prime numbers~\cite{oeis:A065091} is given by $W_{2N}(3)$
+Then, the sequence of odd prime numbers~\cite{oeis:A065091} is given by $W_{2N}(3)$
 \begin{align*}
     \{ 3, \; 5, \; 7, \; 11, \; \dots, \; p \leq 2N - 3\} = W_{2N}(3)
 \end{align*}
-Now we can easily count the number of primes within the interval $6 \leq 2k \leq 2N$ because $\pi(2N)$ equals to
+Now we can easily count the number of primes within the interval $6 \leq 2k \leq 2N$ because $\pi(2N)$ is equal to
 the total number of elements inside the set $W_{2N}(3)$
 \begin{align*}
     \pi(2N) = F_{2N}(3) + 1
 \end{align*}
-where $F_{2N}(3)$ is the function that counts the number of elements inside the set $W_{2N}(3)$,
-in general $F_{2N}(P) = |W_{2N}(3)|$.
+where $F_{2N}(3)$ is the function that counts the number of elements inside the set $W_{2N}(3)$.
+In general $F_{2N}(P) = |W_{2N}(3)|$.
 
 Taking $P=5$ in $W_{2N}(P)$ yields a sequence of primes $p_j$ such that $p_j+2$ is not a prime~\cite{oeis:A049591}
 \begin{align*}
     W_{2N}(5) = \{ 7, \; 13, \; 19, \; 23, \; 31, \; 37, \; 43, \; 47, \; 53, \; \dots, \;  p \leq 2N - 5 \}
 \end{align*}
-Which implies that the number of twin primes in range $6 \leq 2k \leq 2N$ can be expressed in terms of $F_{2N}(P)$
+This implies that the number of twin primes in range $6 \leq 2k \leq 2N$ can be expressed in terms of $F_{2N}(P)$
 \begin{align*}
     \pi_2 (2N) = F_{2N}(3) - F_{2N}(5)
 \end{align*}
@@ -102,11 +103,11 @@ For example,
     \pi_2 (100002) &= F_{100002}(3) - F_{100002}(5) = 1224 \\
     \pi_2 (1000002) &= F_{1000002}(3) - F_{1000002}(5) = 8169
 \end{align*}
-Which matches the sequence~\cite{oeis_A007508}.
+These results match the sequence~\cite{oeis_A007508}.
 
-Having $P=7$ function $W_{2N}(P)$ yields the sequence of primes such that $p_j-p_i \geq 6$
+Having $P=7$ function $W_{2N}(P)$ yields the sequence of primes such that $p_j-p_i \geq 6$,
 where $p_j$ is the next prime after $p_i$, see~\cite{oeis:A124582}
 \begin{align*}
     W_{2N}(7) = \{ 23, \; 31, \;  47, \; 53, \; 61, \;  73, \; 83, \; 89, \; 113, \; \dots, \; p \leq 2N-7 \}
 \end{align*}
-This allows us to count the primes with next-prime gap at least 6: $\delta_6(2N) = F_{2N}(7)$.
+This allows us to count the primes for which the next-prime gap at least 6: $\delta_6(2N) = F_{2N}(7)$.
