@@ -12,6 +12,13 @@ Michel Yamagishi.
 \newblock \url{https://oeis.org/A065091}, 2025.
 \newblock Accessed: 2025-04-18.
 
+\bibitem{oeis_A000720}
+{The OEIS Foundation Inc.}
+\newblock {The On-Line Encyclopedia of Integer Sequences, A000720: Number of
+  primes less than or equal to N.}
+\newblock \url{https://oeis.org/A000720}, 2025.
+\newblock Accessed: 2025-04-18.
+
 \bibitem{oeis:A049591}
 {The OEIS Foundation Inc.}
 \newblock {The On-Line Encyclopedia of Integer Sequences, A049591: Odd primes p

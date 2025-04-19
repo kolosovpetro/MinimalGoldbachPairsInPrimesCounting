@@ -1,4 +1,4 @@
-# Counting primes and twin-primes using minimal Goldbach pairs
+# Minimal Goldbach Pairs in Prime Counting
 
 Assuming Goldbach's Conjecture holds, every even integer $2N \geq 4$ can be written as $2N = p_i + p_j$
 where $(p_i, p_j)$ is called Goldbach pair.
@@ -12,6 +12,10 @@ twin-prime counting $\pi_2(2N)$
 
 $$\pi(2N) = F_{2N}(3) + 1$$
 $$\pi_2(2N) = F_{2N}(3) - F_{2N}(5)$$
+
+## Related MathOverflow question
+
+- https://mathoverflow.net/q/54710/113033
 
 ## Build and run using PowerShell (Windows)
 

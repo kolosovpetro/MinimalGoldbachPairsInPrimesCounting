@@ -15,39 +15,40 @@ and the minimal one is $(3,7)$ because
 $3$ is the smallest among all $p_i$ values: $3, 5, 7$.
 
 
-Consider the following minimal goldbach pairs for even integer $2k$ within the range $6 \leq 2k \leq 50$
+Consider the following minimal Goldbach pairs for even integer $2k$ within the range $6 \leq 2k \leq 50$
 \begin{align*}
-    6  &= 3 + 3,   & 8  &= 3 + 5,   \\
-    10 &= 3 + 7,   & 12 &= 5 + 7,   \\
-    14 &= 3 + 11,  & 16 &= 3 + 13,  \\
-    18 &= 5 + 13,  & 20 &= 3 + 17,  \\
-    22 &= 3 + 19,  & 24 &= 5 + 19,  \\
-    26 &= 3 + 23,  & 28 &= 5 + 23,  \\
-    30 &= 7 + 23,  & 32 &= 3 + 29,  \\
-    34 &= 3 + 31,  & 36 &= 5 + 31,  \\
-    38 &= 7 + 31,  & 40 &= 3 + 37,  \\
-    42 &= 5 + 37,  & 44 &= 3 + 41,  \\
-    46 &= 3 + 43,  & 48 &= 5 + 43,  \\
-    50 &= 3 + 47
+    6  &= 3 + 3,   & 30 &= 7 + 23, \\
+    8  &= 3 + 5,   & 32 &= 3 + 29, \\
+    10 &= 3 + 7,   & 34 &= 3 + 31, \\
+    12 &= 5 + 7,   & 36 &= 5 + 31, \\
+    14 &= 3 + 11,  & 38 &= 7 + 31, \\
+    16 &= 3 + 13,  & 40 &= 3 + 37, \\
+    18 &= 5 + 13,  & 42 &= 5 + 37, \\
+    20 &= 3 + 17,  & 44 &= 3 + 41, \\
+    22 &= 3 + 19,  & 46 &= 3 + 43, \\
+    24 &= 5 + 19,  & 48 &= 5 + 43, \\
+    26 &= 3 + 23,  & 50 &= 3 + 47, \\
+    28 &= 5 + 23,  &
 \end{align*}
 We can notice that minimal Goldbach pairs having $p_i=3$ produce a sequence of odd prime numbers
 $p_j = 3, 5, 7, 11, 13, 17 \dots$ which is quite remarkable:
 \begin{align*}
-    6  &= 3 + 3,   & 8  &= 3 + 5,   \\
-    10 &= 3 + 7,   & 14 &= 3 + 11,  \\
-    16 &= 3 + 13,  & 20 &= 3 + 17,  \\
-    22 &= 3 + 19,  & 26 &= 3 + 23,  \\
-    32 &= 3 + 29,  & 34 &= 3 + 31,  \\
-    40 &= 3 + 37,  & 44 &= 3 + 41,  \\
-    46 &= 3 + 43,  & 50 &= 3 + 47
+    6  &= 3 + 3,   & 32 &= 3 + 29, \\
+    8  &= 3 + 5,   & 34 &= 3 + 31, \\
+    10 &= 3 + 7,   & 40 &= 3 + 37, \\
+    14 &= 3 + 11,  & 44 &= 3 + 41, \\
+    16 &= 3 + 13,  & 46 &= 3 + 43, \\
+    20 &= 3 + 17,  & 50 &= 3 + 47, \\
+    22 &= 3 + 19,  &              \\
+    26 &= 3 + 23,  &
 \end{align*}
 Another interesting observation is that by selecting the pairs with minimal $p_i=5$ yields
 the sequence of primes $p_j$ such that $p_j+2$ is not prime
 \begin{align*}
-    12 &= 5 + 7,   & 18 &= 5 + 13,  \\
-    24 &= 5 + 19,  & 28 &= 5 + 23,  \\
-    36 &= 5 + 31,  & 42 &= 5 + 37,  \\
-    48 &= 5 + 43.
+    12 &= 5 + 7,   & 36 &= 5 + 31, \\
+    18 &= 5 + 13,  & 42 &= 5 + 37, \\
+    24 &= 5 + 19,  & 48 &= 5 + 43, \\
+    28 &= 5 + 23,  &
 \end{align*}
 To formalize and clarify our discussion, we define a few functions.
 Let $G_{\min} (2N)$ be a function that returns a set of minimal Goldbach pairs $(p_i, p_j)$ having $\min p_i$
@@ -78,12 +79,12 @@ Then, the sequence of odd prime numbers~\cite{oeis:A065091} is given by $W_{2N}(
     \{ 3, \; 5, \; 7, \; 11, \; \dots, \; p \leq 2N - 3\} = W_{2N}(3)
 \end{align*}
 Now we can easily count the number of primes within the interval $6 \leq 2k \leq 2N$ because $\pi(2N)$ is equal to
-the total number of elements inside the set $W_{2N}(3)$
+the total number of elements inside the set $W_{2N}(3)$, which corresponds to the sequence~\cite{oeis_A000720}
 \begin{align*}
     \pi(2N) = F_{2N}(3) + 1
 \end{align*}
 where $F_{2N}(3)$ is the function that counts the number of elements inside the set $W_{2N}(3)$.
-In general $F_{2N}(P) = |W_{2N}(3)|$.
+In general $F_{2N}(P) = |W_{2N}(P)|$.
 
 Taking $P=5$ in $W_{2N}(P)$ yields a sequence of primes $p_j$ such that $p_j+2$ is not a prime~\cite{oeis:A049591}
 \begin{align*}
