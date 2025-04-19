@@ -1,4 +1,4 @@
-# Counting primes and twin-primes using minimal Goldbach pairs
+# Minimal Goldbach Pairs in Prime Counting
 
 Assuming Goldbach's Conjecture holds, every even integer $2N \geq 4$ can be written as $2N = p_i + p_j$
 where $(p_i, p_j)$ is called Goldbach pair.
