@@ -8,29 +8,35 @@ Michel Yamagishi.
 
 \bibitem{oeis:A065091}
 {The OEIS Foundation Inc.}
-\newblock {The On-Line Encyclopedia of Integer Sequences}, a065091: Odd primes.
+\newblock {The On-Line Encyclopedia of Integer Sequences, A065091: Odd primes}.
 \newblock \url{https://oeis.org/A065091}, 2025.
 \newblock Accessed: 2025-04-18.
 
 \bibitem{oeis:A049591}
 {The OEIS Foundation Inc.}
-\newblock {The On-Line Encyclopedia of Integer Sequences}, a049591: Odd primes
-  p such that p+2 is composite.
+\newblock {The On-Line Encyclopedia of Integer Sequences, A049591: Odd primes p
+  such that p+2 is composite.}
 \newblock \url{https://oeis.org/A049591}, 2025.
 \newblock Accessed: 2025-04-18.
 
 \bibitem{oeis_A007508}
 {The OEIS Foundation Inc.}
-\newblock {The On-Line Encyclopedia of Integer Sequences}, a007508: Number of
-  twin prime pairs below 10 to power n.
+\newblock {The On-Line Encyclopedia of Integer Sequences, A007508: Number of
+  twin prime pairs below 10 to power N.}
 \newblock \url{https://oeis.org/A007508}, 2025.
 \newblock Accessed: 2025-04-18.
 
 \bibitem{oeis:A124582}
 {The OEIS Foundation Inc.}
-\newblock {The On-Line Encyclopedia of Integer Sequences}, a124582: Primes p
-  such that q-p greater of equal 6, where q is the next prime after p.
+\newblock {The On-Line Encyclopedia of Integer Sequences, A124582: Primes p
+  such that q-p greater of equal 6, where q is the next prime after p.}
 \newblock \url{https://oeis.org/A124582}, 2025.
+\newblock Accessed: 2025-04-18.
+
+\bibitem{kolosovpetro2025minimalgoldbachpairs}
+Petro Kolosov.
+\newblock {Minimal Goldbach Pairs (GitHub)}.
+\newblock \url{https://github.com/kolosovpetro/MinimalGoldbachPairs}, 2025.
 \newblock Accessed: 2025-04-18.
 
 \end{thebibliography}
