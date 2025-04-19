@@ -1,14 +1,17 @@
 # Counting primes and twin-primes using minimal Goldbach pairs
 
-Assuming Goldbach's Conjecture holds, every even integer $2N \geq 4 $ can be written as $2N = p_i + p_j$
+Assuming Goldbach's Conjecture holds, every even integer $2N \geq 4$ can be written as $2N = p_i + p_j$
 where $(p_i, p_j)$ is called Goldbach pair.
+
 The minimal Goldbach pair is a pair $(p_i,p_j)$ having the minimal $p_i$ such that $p_j = 2N - p_i$ is also a prime.
+
 We define a function $F_{2N}(P)$ that counts occurrences of $p_j = P$ within the range $6 \leq 2k \leq 2N$.
+
 In particular, the function $F_{2N}(P)$ provides the following identities in terms of prime counting $\pi(2N)$ and
 twin-prime counting $\pi_2(2N)$
-$$
-\pi(2N) = F_{2N}(3) + 1, \quad \pi_2(2N) = F_{2N}(3) - F_{2N}(5)
-$$
+
+$$\pi(2N) = F_{2N}(3) + 1$$
+$$\pi_2(2N) = F_{2N}(3) - F_{2N}(5)$$
 
 ## Build and run using PowerShell (Windows)
 
