@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 ### Changed
 
 - Remove images and figures
+- Update readme
 
 ## [1.0.0] - 2025-04-20
 
