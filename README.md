@@ -1,12 +1,10 @@
 # Minimal Goldbach pairs in prime and twin-prime counting
 
-Assuming Goldbach's Conjecture holds, every even integer $2N \geq 4$ can be written as $2N = p_i + p_j$
-where $(p_i, p_j)$ is called a Goldbach pair.
-
-The minimal Goldbach pair is a pair $(p_i,p_j)$ having the minimal $p_i$ such that $p_j = 2N - p_i$ is also a prime.
-
-We define a function $F_{2N}(P)$ that counts occurrences of $p_i = P$ within the range $6 \leq 2k \leq 2N$.
-
+Goldbach's Conjecture assumes that every even integer $2N \geq 4$ can be written as the sum of two primes
+$2N = p_i + p_j$, where $(p_i, p_j)$ is called a Goldbach pair.
+The minimal Goldbach pair is a pair $(p_i, p_j)$ such that $p_i$ is minimal and $p_j = 2N - p_i$ is also a prime.
+We define a function $F_{2N}(P)$ that counts the occurrences of $p_i = P$ within the range $6 \leq 2k \leq 2N$,
+where $P$ is a fixed prime number.
 In particular, the function $F_{2N}(P)$ provides the following identities in terms of prime counting $\pi(2N)$ and
 twin-prime counting $\pi_2(2N)$
 
