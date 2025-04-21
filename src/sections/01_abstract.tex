@@ -3,8 +3,14 @@ $2N = p_i + p_j$, where $(p_i, p_j)$ is called a Goldbach pair.
 The minimal Goldbach pair is a pair $(p_i, p_j)$ such that $p_i$ is minimal and $p_j = 2N - p_i$ is also a prime.
 We define a function $F_{2N}(P)$ that counts the occurrences of $p_i = P$ in a set of minimal Goldbach pairs
 up to $2N$, where $P$ is a fixed prime number.
-In particular, the function $F_{2N}(P)$ provides the following identities in terms of prime counting $\pi(2N)$ and
-twin-prime counting $\pi_2(2N)$
+In particular, the function $F_{2N}(P)$ provides the following identities in terms of prime counting $\pi(2N)$,
+twin-prime counting $\pi_2(2N)$ and cousin prime counting $\pi_4(2N)$
 \[
-    \pi(2N) = F_{2N+3}(3) + 1; \quad \pi_2(2N) = F_{2N+3}(3) - F_{2N+5}(5)
+    \pi(2N) = F_{2N+3}(3) + 1
+\]
+\[
+    \pi_2(2N) = F_{2N+3}(3) - F_{2N+5}(5)
+\]
+\[
+    \pi_4(2N) = F_{2N}(5) - F_{2N}(7)
 \]
