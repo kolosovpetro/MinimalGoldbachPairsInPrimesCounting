@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{yamagishi2025goldbach}
 Michel Yamagishi.
@@ -28,8 +28,8 @@ Michel Yamagishi.
 
 \bibitem{oeis:A001359}
 {The OEIS Foundation Inc.}
-\newblock {The On-Line Encyclopedia of Integer Sequences}, a001359: Lesser of
-  twin primes.
+\newblock {The On-Line Encyclopedia of Integer Sequences, A001359: Lesser of
+  twin primes.}
 \newblock \url{https://oeis.org/A001359}, 2025.
 \newblock Accessed: 2025-04-18.
 
@@ -42,9 +42,16 @@ Michel Yamagishi.
 
 \bibitem{oeis:A023200}
 {The OEIS Foundation Inc.}
-\newblock {The On-Line Encyclopedia of Integer Sequences}, a023200: Primes p
-  such that p + 4 is also prime.
+\newblock {The On-Line Encyclopedia of Integer Sequences, A023200: Primes p
+  such that p + 4 is also prime.}
 \newblock \url{https://oeis.org/A023200}, 2025.
+\newblock Accessed: 2025-04-18.
+
+\bibitem{oeis:A093737}
+{The OEIS Foundation Inc.}
+\newblock {The On-Line Encyclopedia of Integer Sequences, A093737: Number of
+  cousin primes (prime pairs differing by 4) less than or equal to n.}
+\newblock \url{https://oeis.org/A093737}, 2025.
 \newblock Accessed: 2025-04-18.
 
 \bibitem{oeis:A124582}

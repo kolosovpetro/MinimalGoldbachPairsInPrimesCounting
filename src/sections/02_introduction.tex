@@ -1,4 +1,5 @@
-This manuscript provides a comprehensive review of the work~\cite{yamagishi2025goldbach} done by Michel Yamagishi.
+This manuscript provides a comprehensive review of the work~\cite{yamagishi2025goldbach} done by Michel Yamagishi,
+extending it with additional results.
 The Goldbach conjecture asserts that every even integer $2N \geq 4$ is a sum of two primes
 \begin{align*}
     2N = p_i + p_j
@@ -119,8 +120,18 @@ the sequence~\cite{oeis:A023200} of twin primes $p_4$
 \end{align*}
 Hence, the number of twin-primes $p_4$ up to $2N$ is
 \begin{align*}
-    \pi_4 (2N) = F_{2N+5}(5) - F_{2N+7}(7)
+    \pi_4 (2N) = F_{2N}(5) - F_{2N}(7)
 \end{align*}
+For example,
+\begin{align*}
+    \pi_4 (10) &= F_{10}(5) - F_{10}(7) = 0 \\
+    \pi_4 (100) &= F_{100}(5) - F_{100}(7) = 7 \\
+    \pi_4 (1000) &= F_{1000}(5) - F_{1000}(7) = 40 \\
+    \pi_4 (10000) &= F_{10000}(5) - F_{10000}(7) = 202 \\
+    \pi_4 (100000) &= F_{100000}(5) - F_{100000}(7) = 1215 \\
+    \pi_4 (1000000) &= F_{1000000}(5) - F_{1000000}(7) = 8143
+\end{align*}
+These results match the sequence~\cite{oeis:A093737}.
 
 Having $P=7$ function $W_{2N}(P)$ yields the sequence of primes such that $p_j-p_i \geq 6$,
 where $p_j$ is the next prime after $p_i$, see~\cite{oeis:A124582}
