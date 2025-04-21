@@ -90,6 +90,11 @@ Taking $P=5$ in $W_{2N}(P)$ yields a sequence of primes $p_j$ such that $p_j+2$ 
 \begin{align*}
     W_{2N}(5) = \{ 7, \; 13, \; 19, \; 23, \; 31, \; 37, \; 43, \; 47, \; 53, \; \dots, \;  p \leq 2N - 5 \}
 \end{align*}
+Hence, by excluding the elements of the set $W_{2N}(5)$ from the set $W_{2N}(3)$ yields the sequence of
+lesser twin primes~\cite{oeis:A001359}
+\begin{align*}
+    W_{2N}(3) \setminus W_{2N}(5) = \{ 3, \; 5, \; 11, \; 17, \; 29, \; 41, \; 59, \; 71, \; 101, \; 107, \; 137, \; \dots, \;  p \leq 2N - 3 \}
+\end{align*}
 This implies that the number of twin primes in range $6 \leq 2k \leq 2N$ can be expressed in terms of $F_{2N}(P)$
 \begin{align*}
     \pi_2 (2N) = F_{2N+3}(3) - F_{2N+5}(5)
@@ -105,6 +110,17 @@ For example,
     \pi_2 (1000000) &= F_{1000000+3}(3) - F_{1000000+5}(5) = 8169
 \end{align*}
 These results match the sequence~\cite{oeis_A007508}.
+
+In addition, the functions $W, F$ provide a way to count twin-primes $p$ with the difference of $4$.
+We can observe this by excluding the elements of the set $W_{2N}(7)$ from the set $W_{2N}(5)$ which gives
+the sequence~\cite{oeis:A023200} of twin primes $p_4$
+\begin{align*}
+    W_{2N}(5) \setminus W_{2N}(7) = \{ 7, \; 13, \; 19, \; 37, \; 43, \; 67, \; 79, \; 97, \; 103, \; 109, \; 127, \; 163, \; \dots, \;  p \leq 2N - 5 \}
+\end{align*}
+Hence, the number of twin-primes $p_4$ up to $2N$ is
+\begin{align*}
+    \pi_4 (2N) = F_{2N+5}(5) - F_{2N+7}(7)
+\end{align*}
 
 Having $P=7$ function $W_{2N}(P)$ yields the sequence of primes such that $p_j-p_i \geq 6$,
 where $p_j$ is the next prime after $p_i$, see~\cite{oeis:A124582}
