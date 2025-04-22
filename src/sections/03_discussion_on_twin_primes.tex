@@ -37,17 +37,20 @@ Therefore,
 \begin{align*}
     \lim_{2N\to\infty} F_{2N+5}(5) = \infty
 \end{align*}
-Primes of the form $6k+1$ are either $p+2$ is composite or $p-2$ is composite or prime.
-In case $p=6k+1$ and $p \pm 2$ is composite, we get an isolated prime, otherwise $p-2$ is prime so that
-we get a greater twin prime $p$.
-Therefore, the function $W_{2N}(5)$ generates the set of primes $p=6k+1$, by excluding this set from the set of prime numbers $W_{2N}(3)$
-yields the sequence of lesser twin primes
+Primes of the form $6k+1$ are either $p+2$ is composite and $p-2$ is composite or lesser twin prime.
+Therefore, the function $W_{2N}(5)$ generates the set of primes $p=6k+1$.
+By excluding this set from the set of odd prime numbers $p$,
+we obtain the sequence of lesser twin primes $p_l$
 \begin{align*}
     \mathtt{Twin \; primes} &= \{ 3, \; 5, \; 11, \; 17, \; 29, \; 41, \; 59, \; 71, \; 101, \; 107, \; 137, \; \dots, \;  p \leq 2N - 3 \} \\
     &= W_{2N}(3) \setminus W_{2N}(5)
 \end{align*}
-Above relation holds because we exclude a set of primes $p$ such that $p+2$ is composite and $p-2$ is prime or composite from
-the set of odd primes $p$, so that result is the set of lesser twin primes.
+Above relation holds because we exclude a set of primes $p_c$
+\begin{itemize}
+    \item $p_c$ such that $p_c+2$ is composite
+    \item $p_c$ such that $p_c-2$ is composite or lesser twin prime
+\end{itemize}
+from the set of odd primes $p$, so that result is the set of lesser twin primes.
 Hence,
 \begin{align*}
     \pi_2 (2N) = F_{2N+3}(3) - F_{2N+5}(5) = \infty, \quad \quad 2N \to \infty
