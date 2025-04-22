@@ -14,22 +14,17 @@ The minimal Goldbach pair is the pair with the smallest $p_i$ among all goldbach
 For the even integer $10$, we have three pairs: $(3,7), \; (5,5), \; (7,3)$
 and the minimal one is $(3,7)$ because
 $3$ is the smallest among all $p_i$ values: $3, 5, 7$.
-
-
 Consider the following minimal Goldbach pairs for even integer $2k$ within the range $6 \leq 2k \leq 50$
 \begin{align*}
-    6  &= 3 + 3,   & 30 &= 7 + 23, \\
-    8  &= 3 + 5,   & 32 &= 3 + 29, \\
-    10 &= 3 + 7,   & 34 &= 3 + 31, \\
-    12 &= 5 + 7,   & 36 &= 5 + 31, \\
-    14 &= 3 + 11,  & 38 &= 7 + 31, \\
-    16 &= 3 + 13,  & 40 &= 3 + 37, \\
-    18 &= 5 + 13,  & 42 &= 5 + 37, \\
-    20 &= 3 + 17,  & 44 &= 3 + 41, \\
-    22 &= 3 + 19,  & 46 &= 3 + 43, \\
-    24 &= 5 + 19,  & 48 &= 5 + 43, \\
-    26 &= 3 + 23,  & 50 &= 3 + 47, \\
-    28 &= 5 + 23,  &
+    6  &= 3 + 3,   & 24 &= 5 + 19,  & 40 &= 3 + 37, \\
+    8  &= 3 + 5,   & 26 &= 3 + 23,  & 42 &= 5 + 37, \\
+    10 &= 3 + 7,   & 28 &= 5 + 23,  & 44 &= 3 + 41, \\
+    12 &= 5 + 7,   & 30 &= 7 + 23,  & 46 &= 3 + 43, \\
+    14 &= 3 + 11,  & 32 &= 3 + 29,  & 48 &= 5 + 43, \\
+    16 &= 3 + 13,  & 34 &= 3 + 31,  & 50 &= 3 + 47, \\
+    18 &= 5 + 13,  & 36 &= 5 + 31,  &             \\
+    20 &= 3 + 17,  & 38 &= 7 + 31,  &             \\
+    22 &= 3 + 19,  &                &
 \end{align*}
 We can notice that minimal Goldbach pairs with minimal $p_i=3$ produce a sequence of odd prime numbers
 $p_j = 3, \; 5, \; 7, \; 11, \; 13, \; 17 \; \dots$ which is quite remarkable:
@@ -55,9 +50,8 @@ To formalize and clarify our discussion, we define a few functions.
 Let $G_{\min} (2N)$ be a function that returns a set of minimal Goldbach pairs $(p_i, p_j)$ having $\min p_i$
 over the range $6 \leq 2k \leq 2N$
 \begin{align*}
-    G_{\min} (2N) = \{(p_i, p_j) \mid p_i + p_j = 2k \mid 6 \leq 2k \leq 2N \mid \min p_i \}.
+    G_{\min} (2N) = \{(p_i, p_j) \mid p_i + p_j = 2k \mid 6 \leq 2k \leq 2N \mid \min p_i \}
 \end{align*}
-
 For example,
 \begin{align*}
     G_{\min}(20) = \{
@@ -94,9 +88,16 @@ Taking $P=5$ in $W_{2N}(P)$ yields a sequence of primes $p_j$ such that $p_j+2$ 
 Hence, by excluding the elements of the set $W_{2N}(5)$ from the set $W_{2N}(3)$ yields the sequence of
 lesser twin primes~\cite{oeis:A001359}
 \begin{align*}
-    W_{2N}(3) \setminus W_{2N}(5) = \{ 3, \; 5, \; 11, \; 17, \; 29, \; 41, \; 59, \; 71, \; 101, \; 107, \; 137, \; \dots, \;  p \leq 2N - 3 \}
+    \mathtt{Lesser \; twin \; primes}  &= \{ 3, \; 5, \; 11, \; 17, \; 29, \; 41, \; 59, \; 71, \; 101, \; 107, \; 137, \; \dots, \;  p \leq 2N - 3 \} \\
+    &=  W_{2N}(3) \setminus W_{2N}(5)
 \end{align*}
-This implies that the number of twin primes in range $6 \leq 2k \leq 2N$ can be expressed in terms of $F_{2N}(P)$
+Above relation holds because the function $W_{2N}(5)$ generates the primes $p=6n+1$ such that either
+\begin{itemize}
+    \item $p+2$ is composite: $p+2 = 3(2n+1)$
+    \item $p-2$ is composite or lesser twin prime
+\end{itemize}
+As a result, by excluding $W_{2N}(3) \setminus W_{2N}(5)$ we get the sequence of lesser twin primes.
+This implies that the number of twin primes $\pi_2$ in range $6 \leq 2k \leq 2N$ can be expressed in terms of $F_{2N}(P)$
 \begin{align*}
     \pi_2 (2N) = F_{2N+3}(3) - F_{2N+5}(5)
 \end{align*}
