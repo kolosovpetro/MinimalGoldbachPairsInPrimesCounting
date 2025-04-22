@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 
 - Minor edits in text
 - Add Acknowledgements
-- Add twin primes discussion
 - Grammar fixes
 
 ## [1.1.0] - 2025-04-22
