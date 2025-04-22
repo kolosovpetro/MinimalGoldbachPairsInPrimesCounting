@@ -48,23 +48,4 @@ we obtain the sequence of lesser twin primes $p_{\ell}$
     \mathtt{Lesser \; twin \; primes} &= \{ 3, \; 5, \; 11, \; 17, \; 29, \; 41, \; 59, \; 71, \; 101, \; 107, \; 137, \; \dots, \;  p_{\ell} \leq 2N - 3 \} \\
     &= W_{2N}(3) \setminus W_{2N}(5)
 \end{align*}
-We know that for every $N\geq 3$
-\begin{align*}
-    \pi_2 (2N) = F_{2N+3}(3) - F_{2N+5}(5)
-\end{align*}
-Since $F_{2N+3}(3) \neq 0$ with $N\geq 2$
-\begin{align*}
-    \lim_{2N\to\infty} \frac{\pi_2(2N)}{F_{2N+3}(3)} = 1 - \lim_{2N\to\infty} \frac{F_{2N+5}(5)}{F_{2N+3}(3)}
-\end{align*}
-If $\pi_2(2N)$ is finite, then
-\begin{align*}
-    \lim_{2N\to\infty} \frac{\pi_2(2N)}{F_{2N+3}(3)} = 0
-\end{align*}
-Which implies
-\begin{align*}
-    \lim_{2N\to\infty} \frac{F_{2N+5}(5)}{F_{2N+3}(3)} = 1
-\end{align*}
-By setting $2N = 10^6$, we have
-\begin{align*}
-    \frac{F_{10^6+5}(5)}{F_{10^6+3}(3)} = \frac{78497}{70328} = 0.895932
-\end{align*}
+Where $N$ can be arbitrary large.
