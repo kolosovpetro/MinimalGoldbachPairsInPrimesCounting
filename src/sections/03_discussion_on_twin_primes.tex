@@ -1,0 +1,54 @@
+﻿Twin prime conjecture asserts that there are infinitely many primes $p$ such that $p+2$ is also a prime.
+Previously we have established the following relation in terms of minimal Goldbach pairs counting function
+$W_{2N}(P)$.
+The set of twin primes is the set $W_{2N}(3)$ exclude the set $W_{2N}(5)$
+\begin{align*}
+    \mathtt{Twin \; primes} &= \{ 3, \; 5, \; 11, \; 17, \; 29, \; 41, \; 59, \; 71, \; 101, \; 107, \; 137, \; \dots, \;  p \leq 2N - 3 \} \\
+    &= W_{2N}(3) \setminus W_{2N}(5)
+\end{align*}
+where $W_{2N}(3)$ gives the set of odd primes $p$, and $W_{2N}(5)$ gives the set of odd primes $p$ such that $p+2$
+is not a prime.
+Thus, the number of twin primes up to integer $2N$ is
+\begin{align*}
+    \pi_2 (2N) = F_{2N+3}(3) - F_{2N+5}(5)
+\end{align*}
+where $F_{2N}(P)$ counts the elements inside the set $W_{2N}(3)$.
+Therefore, the twin prime conjecture is identical to the assertion that
+\begin{align*}
+    \pi_2 (2N) = F_{2N+3}(3) - F_{2N+5}(5) = \infty, \quad \quad 2N\to\infty
+\end{align*}
+Thanks to Euclid, we know that there are infinitely many primes, thus
+there are infinitely many minimal Goldbach pairs $(p_i, p_j) = (3, p_j)$ such that $2N=p_i+p_j$,
+hence
+\begin{align*}
+    \lim_{2N\to\infty} F_{2N+3}(3) = \infty
+\end{align*}
+Consider the set $W_{2N}(5)$ which gives the sequence of odd primes $p$ such that $p+2$ is not a prime.
+Dirichlet theorem shows that there are infinitely many primes of the form
+\begin{align*}
+    p = 6k+1
+\end{align*}
+Therefore, there are infinitely many primes $p$ such that $p+2$ is not a prime
+\begin{align*}
+    p+2 = 6k+3 = 3(2k+1)
+\end{align*}
+where $p+2$ is a composite number divisible by 3.
+Therefore,
+\begin{align*}
+    \lim_{2N\to\infty} F_{2N+5}(5) = \infty
+\end{align*}
+Primes of the form $6k+1$ are either $p+2$ is composite or $p-2$ is composite or prime.
+In case $p=6k+1$ and $p \pm 2$ is composite, we get an isolated prime, otherwise $p-2$ is prime so that
+we get a greater twin prime $p$.
+Therefore, the function $W_{2N}(5)$ generates the set of primes $p=6k+1$, by excluding this set from the set of prime numbers $W_{2N}(3)$
+yields the sequence of lesser twin primes
+\begin{align*}
+    \mathtt{Twin \; primes} &= \{ 3, \; 5, \; 11, \; 17, \; 29, \; 41, \; 59, \; 71, \; 101, \; 107, \; 137, \; \dots, \;  p \leq 2N - 3 \} \\
+    &= W_{2N}(3) \setminus W_{2N}(5)
+\end{align*}
+Above relation holds because we exclude a set of primes $p$ such that $p+2$ is composite and $p-2$ is prime or composite from
+the set of odd primes $p$, so that result is the set of lesser twin primes.
+Hence,
+\begin{align*}
+    \pi_2 (2N) = F_{2N+3}(3) - F_{2N+5}(5) = \infty, \quad \quad 2N \to \infty
+\end{align*}
