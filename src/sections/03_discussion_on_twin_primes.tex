@@ -23,36 +23,48 @@ hence
 \begin{align*}
     \lim_{2N\to\infty} F_{2N+3}(3) = \infty
 \end{align*}
-Consider the set $W_{2N}(5)$ which gives the sequence of odd primes $p$ such that $p+2$ is not a prime.
+Consider the set $W_{2N}(5)$ which gives the sequence of odd primes $p=6n+1$ such that $p+2$ is not a prime.
 Dirichlet's theorem shows that there are infinitely many primes of the form
 \begin{align*}
-    p = 6k+1
+    p = 6n+1
 \end{align*}
 Therefore, there are infinitely many primes $p$ such that $p+2$ is not a prime
 \begin{align*}
-    p+2 = 6k+3 = 3(2k+1)
+    p+2 = 6n+3 = 3(2n+1)
 \end{align*}
-where $p+2$ is a composite number divisible by 3.
-Therefore,
+Consequently,
 \begin{align*}
     \lim_{2N\to\infty} F_{2N+5}(5) = \infty
 \end{align*}
-Primes of the form $6k+1$ are such that either $p+2$ is composite and $p-2$ is composite,
-or they are lesser twin primes.
-Therefore, the function $W_{2N}(5)$ generates the set of primes $p=6k+1$.
-By excluding this set from the set of odd prime numbers $p$,
-we obtain the sequence of lesser twin primes $p_l$
+Primes $p=6n+1$ are such that either
+\begin{itemize}
+    \item $p+2$ is composite
+    \item $p-2$ is composite or lesser twin prime
+\end{itemize}
+Therefore, the function $W_{2N}(5)$ generates the set of primes of the form $p=6n+1$.
+By excluding the set $W_{2N}(5)$ from the set of odd prime numbers $p$,
+we obtain the sequence of lesser twin primes $p_{\ell}$
 \begin{align*}
-    \mathtt{Lesser \; twin \; primes} &= \{ 3, \; 5, \; 11, \; 17, \; 29, \; 41, \; 59, \; 71, \; 101, \; 107, \; 137, \; \dots, \;  p \leq 2N - 3 \} \\
+    \mathtt{Lesser \; twin \; primes} &= \{ 3, \; 5, \; 11, \; 17, \; 29, \; 41, \; 59, \; 71, \; 101, \; 107, \; 137, \; \dots, \;  p_{\ell} \leq 2N - 3 \} \\
     &= W_{2N}(3) \setminus W_{2N}(5)
 \end{align*}
-Above relation holds because we exclude a set of primes $p_c$
-\begin{itemize}
-    \item $p_c$ such that $p_c+2$ is composite
-    \item $p_c$ such that $p_c-2$ is composite or lesser twin prime
-\end{itemize}
-from the set of odd primes $p$, so that the result is the set of lesser twin primes.
-Hence,
+We know that for every $N\geq 3$
 \begin{align*}
-    \pi_2 (2N) = F_{2N+3}(3) - F_{2N+5}(5) = \infty, \quad \quad 2N \to \infty
+    \pi_2 (2N) = F_{2N+3}(3) - F_{2N+5}(5)
+\end{align*}
+Since $F_{2N+3}(3) \neq 0$ with $N\geq 2$
+\begin{align*}
+    \lim_{2N\to\infty} \frac{\pi_2(2N)}{F_{2N+3}(3)} = 1 - \lim_{2N\to\infty} \frac{F_{2N+5}(5)}{F_{2N+3}(3)}
+\end{align*}
+If $\pi_2(2N)$ is finite, then
+\begin{align*}
+    \lim_{2N\to\infty} \frac{\pi_2(2N)}{F_{2N+3}(3)} = 0
+\end{align*}
+Which implies
+\begin{align*}
+    \lim_{2N\to\infty} \frac{F_{2N+5}(5)}{F_{2N+3}(3)} = 1
+\end{align*}
+By setting $2N = 10^6$, we have
+\begin{align*}
+    \frac{F_{10^6+5}(5)}{F_{10^6+3}(3)} = \frac{78497}{70328} = 0.895932
 \end{align*}
