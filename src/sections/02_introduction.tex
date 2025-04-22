@@ -112,13 +112,14 @@ For example,
 \end{align*}
 These results match the sequence~\cite{oeis_A007508}.
 
-In addition, the functions $W, F$ provide a way to count twin-primes $p$ with the difference of $4$.
+In addition, the functions $W_{2N}(P)$ and $F_{2N}(P)$ provide a way to count cousin
+primes $p$ such that $p+4$ is a prime.
 We can observe this by excluding the elements of the set $W_{2N}(7)$ from the set $W_{2N}(5)$ which gives
-the sequence~\cite{oeis:A023200} of twin primes $p_4$
+the sequence of cousin primes~\cite{oeis:A023200}
 \begin{align*}
     W_{2N}(5) \setminus W_{2N}(7) = \{ 7, \; 13, \; 19, \; 37, \; 43, \; 67, \; 79, \; 97, \; 103, \; 109, \; 127, \; 163, \; \dots, \;  p \leq 2N - 5 \}
 \end{align*}
-Hence, the number of twin-primes $p_4$ up to $2N$ is
+Therefore, the number of cousin primes up to $2N$ can be calculated as
 \begin{align*}
     \pi_4 (2N) = F_{2N}(5) - F_{2N}(7)
 \end{align*}
